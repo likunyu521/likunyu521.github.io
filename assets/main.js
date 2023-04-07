@@ -40,7 +40,6 @@ $(document).ready(function ()
              	    $("body").css("background-color","white");
                      $(".panel-cover__logo").attr("value","white");
              return;
-
              }}
        });
 });
