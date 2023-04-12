@@ -29,6 +29,10 @@ $(document).ready(function ()
 	    }
 
       });
+//      $(".panel-cover__description").click(function(){
+//      	    console.log("hhhh")
+//      	    window.location.href = "http://likunyu.com/hi";
+//            });
       $(document).keyup(function(event){
              switch(event.keyCode) {
              case 32:
