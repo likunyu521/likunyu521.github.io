@@ -10,11 +10,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.NianBroken-shouqi:before {
+.likunyu-shouqi:before {
   content: "\2b06";
 }
 
-.NianBroken-zhankai:before {
+.likunyu-zhankai:before {
   content: "\2b07";
 }
 
