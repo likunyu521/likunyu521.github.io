@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<meta http-equiv="content-language" content="zh-cn">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>什么值得买-李坤雨</title>
+		<meta name="description" content="浪漫主义的花永不凋零">
+		<link rel="shortcut icon" href="./assets/img/favicon.ico" />
+		<meta name="theme-color" content="#343434">
+		<link rel="icon" type="image/png" href="./assets/img/avatar.jpg">
+		<link href="./assets/img/avatar.jpg" rel="shortcut icon" type="image/png">
+		<link rel="stylesheet" href="./assets/css/other.css">
+		<link rel="stylesheet" href="./assets/css/main.css">
+		<!--Fuck Weixin and Baidu-->
+		<meta http-equiv="Cache-Control" content="no-transform">
+		<meta http-equiv="”Cache-Control”" content="”no-siteapp“">
+		<meta name="applicable-device" content="pc,mobile">
+		<meta name="HandheldFriendly" content="true">
+	<style class="mpa-style-fix ImageGatherer">.FotorFrame{position:fixed!important}</style><style class="mpa-style-fix SideFunctionPanel">.weui-desktop-online-faq__wrp{top:304px!important;bottom:unset!important}.weui-desktop-online-faq__wrp .weui-desktop-online-faq__switch{width:38px!important}</style><style type="text/css">
+      @font-face {
+          font-family: "element-icons";
+          src: url('chrome-extension://moombeodfomdpjnpocobemoiaemednkg/fonts/element-icons.woff') format('woff'),
+          url('chrome-extension://moombeodfomdpjnpocobemoiaemednkg/fonts/element-icons.ttf ') format('truetype'); /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+      }
+  </style></head>
+	<body style="background-color: grey;" onselectstart="return false" mpa-version="9.0.0" mpa-extension-id="ibefaeehajgcpooopoegkifhgecigeeg">
+<!--		<span class="mobile btn-mobile-menu">-->
+<!--		<i class="iconfont likunyu-zhankai btn-mobile-menu__icon"></i>-->
+<!--		<i class="iconfont likunyu-shouqi btn-mobile-close__icon hidden"></i>-->
+<!--		</span>-->
+		<header class="panel-cover">
+			<div class="panel-main">
+				<div class="panel-main__inner panel-inverted">
+					<div class="panel-main__content2">
+						<img onclick="javascript:location.href = 'index.html'" src="./assets/img/avatar.jpg" width="80" alt="logo" class="panel-cover__logo2 logo" value = "white">
+						<h2 class="panel-cover__title2 panel-title">什么值得买</h2>
+						<hr class="panel-cover__divider">
+<!--						<p class="panel-cover__description">买过的一些好物~</p>-->
+
+						<div class="navigation-wrapper2">
+							<div>
+								<nav class="cover-navigation cover-navigation--primary">
+									<ul class="navigation2">
+<!--										<li class="navigation__item"><a href="http://likunyu.com/hi" target="_blank" title="hhh">个人说明书</a></li>-->
+
+									</ul>
+								</nav>
+							</div>
+<!--							<div>-->
+<!--								<nav class="cover-navigation navigation&#45;&#45;social">-->
+<!--									<ul class="navigation">-->
+<!--										<li class="navigation__item">-->
+<!--											<a href="./index.html" rel="author" title="heart beat" target="_blank">-->
+<!--											<img src="./assets/img/heart.svg" width="30" alt="heart beat" title="heart beat">-->
+<!--											<span class="label">heart beat</span>-->
+<!--											</a>-->
+<!--										</li>-->
+<!--									</ul>-->
+<!--								</nav>-->
+<!--							</div>-->
+						</div>
+					</div>
+					<hr class="panel-cover__divider panel-cover__divider--secondary">
+				</div>
+			</div>
+		</header>
+		<script type="text/javascript" src="./assets/js/jquery-1.11.3.min.js"></script>
+<!--		<script type="text/javascript" src="./assets/js/main.js"></script>-->
+
+<script>
+   $(function() {
+   		var xhr = new XMLHttpRequest();
+		xhr.withCredentials = true;
+        var list = [];
+        $.ajax({
+<!--            url: "https://likunyu.com:8000/api/buy",-->
+            url: "http://localhost:8000/api/buy",
+            dataType: "json",
+            type: "get",
+            async: '',
+            data: {},
+            headers : {
+        			'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
+    		},
+            success: function(res) {
+<!--                console.log(res);-->
+                list = res.datalist;
+                len = res.len
+                //也可以直接在这里处理数据
+            },
+            error: function(res) {
+                // console.log(res);
+            }
+        });
+        console.log(list);
+        // 展示获取过来的数据,先对其遍历循环，放到行标签里，之后将创建好的元素插入到table中
+        $(list).each(function(i, ele) {
+            var $tr = $('<tr><td>' + (i + 1) + '</td><td class="name">' + ele.title + '</td><td class="imgSrc"><img src=' + ele.url + ' /></td></tr>');
+            var $tr2 = $('<li class="navigation__item"><a href='+ele.url+' target="_blank" title="hhh">'+ele.name+'</a></li>');
+
+
+            $('.navigation2').append($tr2);
+            // console.log(i);
+            // console.log(list[i].title);
+        });
+    });
+</script>
+	</body>
+</html>
