@@ -9,32 +9,9 @@ $(document).ready(function ()
 
 	}),
 
-//	$("body").on("touchstart", function (e) {
-//       e.preventDefault();
-//        startX = e.originalEvent.changedTouches[0].pageX,
-//        startY = e.originalEvent.changedTouches[0].pageY;
-//    });
-//    $("body").on("touchmove", function (e) {
-//        e.preventDefault();
-//        moveEndX = e.originalEvent.changedTouches[0].pageX,
-//            moveEndY = e.originalEvent.changedTouches[0].pageY,
-//            X = moveEndX - startX,
-//            Y = moveEndY - startY;
-//        if (Math.abs(Y) > Math.abs(X) && Y > 0) {
-//            console.log("向上滑动");
-//            $(".navigation-wrapper").toggleClass("visible animated bounceInDown"), $(".btn-mobile-menu__icon").toggleClass("iconfont likunyu-zhankai iconfont likunyu-shouqi animated fadeIn")
-//        }
-//        else if (Math.abs(Y) > Math.abs(X) && Y < 0) {
-//            console.log("向下滑动");
-//            		$(".navigation-wrapper").toggleClass("visible animated bounceOutUp")
-//        }
-//        else {
-//            console.log("触控");
-//        }
-//    });
 
-    //点击头像改变背景颜色
-	$(".panel-cover__logo, .panel-cover__title").click(function(){
+        //点击头像改变背景颜色
+	   $(".panel-cover__logo, .panel-cover__title").click(function(){
 	    console.log("hhhh")
 	    var img_value = $(".panel-cover__logo").attr("value");
 	    console.log(img_value)
@@ -46,10 +23,31 @@ $(document).ready(function ()
         $(".panel-cover__logo").attr("value","white");
 	    }
       });
-      $(".copyright").click(function(){
-      	    console.log("加油呀")
+
+       $(".copyright").click(function(){
+//      	    console.log("加油呀")
       	    Toast("你是最棒的，加油~",1000)
             });
+
+       $(".contactMe").click(function(){
+       //      	    console.log("加油呀")
+
+             	    Toast("发暗号：可爱加冰",3000)
+             	    Toast("在公众号：李坤雨",1500)
+                   });
+
+       $(function () {
+             if(!window.localStorage.getItem('first_toast')){
+                   setTimeout(function () {
+                                   toast_str = "点击头像有惊喜哦😄";
+                                   if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+                                   toast_str = "点击顶部导航有惊喜😄"
+                                   };
+                                   Toast(toast_str,2000);}, 2000);
+                   window.localStorage.setItem('first_toast','true')};
+
+
+        });
 
        $(".panel-cover__description").click(function(){
             if (isWap()){

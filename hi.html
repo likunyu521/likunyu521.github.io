@@ -4,7 +4,7 @@
 		<meta http-equiv="content-language" content="zh-cn">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<title>什么值得买-李坤雨</title>
+		<title>个人说明书-李坤雨</title>
 		<meta name="description" content="浪漫主义的花永不凋零">
 		<link rel="shortcut icon" href="./assets/img/favicon.ico" />
 		<meta name="theme-color" content="#343434">
@@ -26,6 +26,23 @@
           url('chrome-extension://moombeodfomdpjnpocobemoiaemednkg/fonts/element-icons.ttf ') format('truetype'); /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
       }
   </style>
+
+	<style>
+
+        .box {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .box div {
+            width: 50%;
+        }
+
+        .box img {
+            width: 100%;
+        }
+    </style>
 	</head>
 <body onselectstart="return false" mpa-version="9.0.0" mpa-extension-id="ibefaeehajgcpooopoegkifhgecigeeg">
 <!--		<span class="mobile btn-mobile-menu">-->
@@ -38,18 +55,47 @@
 					<div class="panel-main__content2">
 						<div id="myHead">
 						<img onclick="javascript:location.href = 'index.html'" src="./assets/img/avatar.jpg" width="80" alt="logo" class="panel-cover__logo2 logo" value = "white">
-						<h2 class="panel-cover__title2 panel-title">什么值得买</h2>
+						<h2 class="panel-cover__title2 panel-title">个人说明书</h2>
 						<hr class="decorateDivider">
 						</div>
 
-						<div class="navigation-wrapper2">
+						<div class="navigation-wrapper2" style="text-align:left;color:white;">
 							<div id=myContent>
-								<nav class="cover-navigation cover-navigation--primary">
-									<ul class="navigation2">
-<!--										<li class="navigation__item"><a href="http://likunyu.com/hi" target="_blank" title="hhh">个人说明书</a></li>-->
+								<br>
+								我叫李坤雨，INTJ，工程师，崇尚极客效率，喜欢阅读、写作和数码。重庆人在北京，有领养了一只流浪猫，叫花花。
+								永远充满好奇，永远求索新知，永远对生活满怀无畏的热情。
+								<br>
+								<br>
+								<h3>🌵正在做的尝试</h3>
+								1、做视频、写公众号
+								2、增重增肌
+								3、学尤克里里
+								<br>
+								<br>
+								<h3>📚喜欢的书</h3>
+								《且听风吟》、《小王子》、《今日的艺术》、《小狗钱钱》
+								<br>
+								<br>
+								<h3>🎵喜欢的音乐</h3>
+								摇滚 痛仰 新裤子
+								<br>
+								<br>
+								<div class="box">
+									<div><img src="./assets/img/cloud.jpg" alt=""></div>
+									<div><img src="./assets/img/mountain.JPG" alt=""></div>
 
-									</ul>
-								</nav>
+								</div>
+								<div class="box">
+
+									<div><img src="./assets/img/camera.jpg" alt=""></div>
+									<div><img src="./assets/img/camera.jpg" alt=""></div>
+								</div>
+								<br>
+								<br>
+								联系我：<button class="contactMe">点击</button>
+
+
+
 							</div>
 						</div>
 					</div>
@@ -58,41 +104,7 @@
 			</div>
 		</header>
 		<script type="text/javascript" src="./assets/js/jquery-1.11.3.min.js"></script>
-<!--		<script type="text/javascript" src="./assets/js/main.js"></script>-->
-
-<script>
-   $(function() {
-   		var xhr = new XMLHttpRequest();
-		xhr.withCredentials = true;
-        var list = [];
-        $.ajax({
-            url: "https://likunyu.com:8000/api/buy",
-<!--            url: "http://localhost:8000/api/buy",-->
-            dataType: "json",
-            type: "get",
-            async: '',
-            data: {},
-            headers : {
-        			'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
-    		},
-            success: function(res) {
-<!--                console.log(res);-->
-                list = res.datalist;
-                len = res.len
-                //也可以直接在这里处理数据
-            },
-            error: function(res) {
-                // console.log(res);
-            }
-        });
-        console.log(list);
-        // 展示获取过来的数据,先对其遍历循环
-        $(list).each(function(i, ele) {
-            var $tr = $('<tr><td>' + (i + 1) + '</td><td class="name">' + ele.title + '</td><td class="imgSrc"><img src=' + ele.url + ' /></td></tr>');
-            var $tr2 = $('<li class="navigation__item"><a href='+ele.url+' target="_blank" title="hhh">'+ele.name+'</a></li>');
-            $('.navigation2').append($tr2);
-        });
-    });
-</script>
+		<script type="text/javascript" src="./assets/js/yh.js"></script>
+		<script type="text/javascript" src="./assets/js/main.js"></script>
 	</body>
 </html>
