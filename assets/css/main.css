@@ -1330,7 +1330,7 @@ input[type="tel"]:-ms-input-placeholder {
 
 	.panel-main__inner {
 		display: table-cell;
-		padding: 60px 5%
+		padding: 30px 3%
 	}
 
 	.panel-cover__description {
