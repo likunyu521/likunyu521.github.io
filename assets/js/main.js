@@ -30,10 +30,9 @@ $(document).ready(function ()
             });
 
        $(".contactMe").click(function(){
-       //      	    console.log("加油呀")
-
-             	    Toast("发暗号：可爱加冰",3000)
-             	    Toast("在公众号：李坤雨",1500)
+             	    console.log("contact me");
+             	    Toast("发暗号：可乐加冰",3000);
+             	    Toast("在公众号：李坤雨",1500);
                    });
 
        $(function () {
