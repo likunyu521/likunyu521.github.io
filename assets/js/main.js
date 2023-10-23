@@ -10,6 +10,7 @@ $(document).ready(function ()
 	}),
 
 
+
         //点击头像改变背景颜色
 	   $(".panel-cover__logo, .panel-cover__title").click(function(){
 	    console.log("hhhh")
@@ -29,11 +30,15 @@ $(document).ready(function ()
       	    Toast("你是最棒的，加油~",1000)
             });
 
-       $(".contactMe").click(function(){
-             	    console.log("contact me");
-             	    Toast("发暗号：可乐加冰",3000);
-             	    Toast("在公众号：李坤雨",1500);
-                   });
+//       $(".contactMe").click(function(){
+//             	    console.log("contact me");
+//             	    Toast("发暗号：可乐加冰",3000);
+//             	    Toast("在公众号：李坤雨",1500);
+//                   });
+
+        $(".contactMe").click(function(){
+                     	    $("#anhao").toggle("slow");
+                           });
 
        $(function () {
              if(!window.localStorage.getItem('first_toast')){
