@@ -59,6 +59,7 @@
 		</header>
 		<script type="text/javascript" src="./assets/js/jquery-1.11.3.min.js"></script>
 <!--		<script type="text/javascript" src="./assets/js/main.js"></script>-->
+		<script type="text/javascript" src="./assets/js/baidu_tongji.js">
 
 <script>
    $(function() {
@@ -67,7 +68,6 @@
         var list = [];
         $.ajax({
             url: "https://likunyu.com:8000/api/doc",
-<!--            url: "http://localhost:8000/api/buy",-->
             dataType: "json",
             type: "get",
             async: '',
